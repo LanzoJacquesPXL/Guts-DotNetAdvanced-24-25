@@ -1,9 +1,19 @@
 ﻿namespace CardGames.Domain;
 
-public class Card
+public struct Card : ICard
 {
     public Card(CardSuit suit, CardRank rank)
     {
-        throw new NotImplementedException("Card constructor not implemented yet.");
+        Suit = suit;
+        Rank = rank;
+    }
+
+    public CardSuit Suit { get; }
+
+    public CardRank Rank { get; }
+
+    public override String ToString()
+    {
+        return  Rank + " of " + Suit; 
     }
 }

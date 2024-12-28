@@ -6,5 +6,7 @@ public interface ICardDeck
     void Shuffle();
     ICard DealCard();
     ICardDeck WithoutCardsRankingLowerThan(CardRank minimumRank);
+
+    [Obsolete("This feature was removed")]
     IList<CardDeck> SplitBySuit();
 }
